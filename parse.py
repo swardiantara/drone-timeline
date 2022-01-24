@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import json
 
-path = r"E:\6025211018 - Swardiantara S\Drone Datasets\DJI_Mavic_2\df069\mobile_iOS_backup\df069\Export"
+path = r"E:\6025211018 - Swardiantara S\Drone Datasets\DJI_Mavic_Air\df048\2018_April\mobile_iOS_backup\df048\Export"
 
 os.chdir(path)
 
@@ -48,20 +48,20 @@ def read_file(file_name):
             dataframe = pd.DataFrame(record_list, index=None, columns=["date", "time", "message_type", "message"])
             dataframe.to_csv(f"{path}/{file_name}.csv", index=False, encoding='utf-8')
             # print(text_split)
-        # elif first_char == "[" and not second_char == "[":  # [2017-06-28 05:56:19.955]remove need upgrade groups
-        #     # List
-        #     # print(contents)
-        #     lines = contents.split("\n")
-        #     data_list = []
-        #     for line in lines:
-        #         text_split = line.split("]")
-        #         # print(line)
-        #         date = text_split[0].split(" ")[0].replace("[", "")
-        #         time = text_split[0].split(" ")[1]
-        #         message = text_split[1]
-        #         data_list.append([date, time, message])
-        #     dataframe = pd.DataFrame(data_list, index=None, columns=["date", "time", "message"])
-        #     dataframe.to_csv(f"{path}/{file_name}.csv", index=False, encoding='utf-8')
+        elif first_char == "[" and not second_char == "[":  # [2017-06-28 05:56:19.955]remove need upgrade groups
+            # List
+            # print(contents)
+            lines = contents.split("\n")
+            data_list = []
+            for line in lines:
+                text_split = line.split("]")
+                # print(line)
+                date = text_split[0].split(" ")[0].replace("[", "")
+                time = text_split[0].split(" ")[1]
+                message = text_split[1]
+                data_list.append([date, time, message])
+            dataframe = pd.DataFrame(data_list, index=None, columns=["date", "time", "message"])
+            dataframe.to_csv(f"{path}/{file_name}.csv", index=False, encoding='utf-8')
         # print(f.read())
         file.close()
 
