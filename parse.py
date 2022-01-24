@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import json
 
-path = r"E:\6025211018 - Swardiantara S\Drone Datasets\DJI_Mavic_Air\df048\2018_June\mobile_iOS_backup\df048-2\Export"
+path = r"E:\6025211018 - Swardiantara S\Drone Datasets\DJI_Mavic_Air\df049\2018_April\mobile_iOS_backup\df049\Export"
 
 os.chdir(path)
 
@@ -37,7 +37,7 @@ def read_file(file_name):
             for record in text_split:
                 # print(record)
                 split_record = record.split(",")
-                print(split_record)
+                # print(split_record)
                 record = "".join(filter(str.isalnum, record))
                 date = split_record[0].split(" ")[0].replace('[', "").replace('"', "")
                 time = split_record[0].split(" ")[1].replace('"', "")
