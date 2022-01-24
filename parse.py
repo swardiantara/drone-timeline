@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import json
 
-path = r"E:\6025211018 - Swardiantara S\Drone Datasets\DJI_Inspire_2\df027\2017_August\mobile_iOS_backup\df027\Export"
+path = r"E:\6025211018 - Swardiantara S\Drone Datasets\DJI_Inspire_2\df027\2018_June\mobile_iOS_backup\ios_backup\ios_backup\df027-2\Export"
 
 os.chdir(path)
 
