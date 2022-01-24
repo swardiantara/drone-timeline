@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import json
 
-path = r"E:\6025211018 - Swardiantara S\Drone Datasets\DJI_Mavic_Pro\df019\2017_August\mobile_iOS_backup\df019\Export"
+path = r"E:\6025211018 - Swardiantara S\Drone Datasets\DJI_Mavic_Pro\df020\2017_August\mobile_iOS_backup\020\Export"
 
 os.chdir(path)
 
@@ -58,7 +58,9 @@ def read_file(file_name):
                 # print(line)
                 date = text_split[0].split(" ")[0].replace("[", "")
                 time = text_split[0].split(" ")[1]
-                message = text_split[1]
+                message = ""
+                if len(text_split) > 1:
+                    message = text_split[1]
                 data_list.append([date, time, message])
             dataframe = pd.DataFrame(data_list, index=None, columns=["date", "time", "message"])
             dataframe.to_csv(f"{path}/{file_name}.csv", index=False, encoding='utf-8')
