@@ -2340,7 +2340,10 @@ date,time,message
 8/26/2017,08:41.9,push upgrade progress: 95%
 8/26/2017,08:43.0,push upgrade progress: 100%
 8/26/2017,08:43.0,push upgrade progress: 100%
+<<<<<<< HEAD
 product,type:,
 product,type:,
 product,type:,
 product,type:,
+=======
+>>>>>>> 858dc4381a54df013d3ac7ccf2ce4cc5c8c2a0f6
