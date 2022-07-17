@@ -3,7 +3,7 @@ import pandas as pd
 import json
 
 def read_file(path, file_name, folder_data):
-    file_name = "contoh.csv"
+    # file_name = "contoh.csv"
     full_path = f"{path}/{file_name}"
     file_ext = file_name.split(".")        
     file_ext = file_ext[1] if len(file_ext) > 1 else "" 
@@ -13,7 +13,7 @@ def read_file(path, file_name, folder_data):
     print("Ekstensi: %s" % file_ext)
     if file_ext == "csv":
         flight_log = pd.read_csv(full_path, encoding="utf-8")
-        print(flight_log.columns)
+        print(flight_log.shape)
         return ""
         # CUSTOM.date [local]
         # CUSTOM.updateTime [local]
