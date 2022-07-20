@@ -13,17 +13,25 @@ def read_file(path, file_name, folder_data):
     # print("Ekstensi: %s" % file_ext)
     if file_ext == "csv":
         flight_log = ""
+        first_line = ""
+        first_col = ""
+        sep = ""
+        
+        # read file first line
         with open(full_path, "r") as file:
             first_line = file.readline()
             first_col = first_line.split(',')
-            print("num of line: ", len(first_line))
-            sep = ""
-            if (first_col == "CUSTOM.date [local]"):
-                print("masuk waras")
-                flight_log = pd.read_csv(full_path, encoding="utf-8")
-            else:
-                print("masuk ndak waras")
-                dataframe = []
+            file.close()
+            
+        print("num of line: ", len(first_line))
+        if (first_col == "CUSTOM.date [local]"):
+            print("masuk waras")
+            flight_log = pd.read_csv(full_path, encoding="utf-8")
+        else:
+            print("masuk ndak waras")
+            dataframe = []
+            # read ulang file untuk ambil content
+            with open(full_path) as file:
                 for i, line in enumerate(file):
                     if i == 0: # First row should be column name
                         sep = line.rstrip()[-1]
@@ -35,7 +43,31 @@ def read_file(path, file_name, folder_data):
                         print(len(line))
                         dataframe.append(line.rstrip().split(sep))
                 flight_log = pd.DataFrame(data=dataframe[1:], columns=dataframe[0])
-            file.close()
+                file.close()
+#         flight_log = ""
+#         with open(full_path, "r") as file:
+#             first_line = file.readline()
+#             first_col = first_line.split(',')
+#             print("num of line: ", len(first_line))
+#             sep = ""
+#             if (first_col == "CUSTOM.date [local]"):
+#                 print("masuk waras")
+#                 flight_log = pd.read_csv(full_path, encoding="utf-8")
+#             else:
+#                 print("masuk ndak waras")
+#                 dataframe = []
+#                 for i, line in enumerate(file):
+#                     if i == 0: # First row should be column name
+#                         sep = line.rstrip()[-1]
+#                         # print(sep)
+#                         # print("first line:", line)
+#                     elif i > 0:
+#                         # print("second line: ", line)
+#                         line = line.rstrip().split(sep)
+#                         print(len(line))
+#                         dataframe.append(line.rstrip().split(sep))
+#                 flight_log = pd.DataFrame(data=dataframe[1:], columns=dataframe[0])
+#             file.close()
         # CUSTOM.date [local]
         # CUSTOM.updateTime [local]
         # APP.message
