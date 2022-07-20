@@ -35,13 +35,13 @@ def read_file(path, file_name, folder_data):
                 for i, line in enumerate(file):
                     if i == 0: # First row should be column name
                         sep = line.rstrip()[-1]
-                        # print(sep)
-                        # print("first line:", line)
+#                         print(sep)
+#                         print("first line:", line)
                     elif i > 0:
-                        # print("second line: ", line)
+#                         print("second line: ", line, '\n')
                         line = line.rstrip().split(sep)
-                        print(len(line))
-                        dataframe.append(line.rstrip().split(sep))
+#                         print(len(line))
+                        dataframe.append(line)
                 flight_log = pd.DataFrame(data=dataframe[1:], columns=dataframe[0])
                 file.close()
 #         flight_log = ""
