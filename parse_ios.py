@@ -71,7 +71,7 @@ def read_file(path, file_name, folder_data):
 
 
 def main():
-    path = r"E:\6025211018 - Swardiantara S\drone-timeline\DJI_Inspire_2\df026\2017_August\mobile_iOS_backup"
+    path = r"E:\6025211018 - Swardiantara S\drone-timeline\DJI_Spark\df008\2018_June\mobile_iOS"
     os.chdir(path)
     path_split = path.split("\\")
     controller = path_split[-1]

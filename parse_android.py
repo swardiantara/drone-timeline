@@ -16,32 +16,99 @@ def read_file(path, file_name, folder_data):
         first_line = ""
         first_col = ""
         sep = ""
+        col_num = 0
+        data_num = 0
         
         # read file first line
         with open(full_path, "r") as file:
             first_line = file.readline()
-            first_col = first_line.split(',')
+            first_col = first_line.split(',')[0]
+            print("first col: ", first_col)
             file.close()
             
         print("num of line: ", len(first_line))
         if (first_col == "CUSTOM.date [local]"):
-            print("masuk waras")
+            print("Kondisi normal")
             flight_log = pd.read_csv(full_path, encoding="utf-8")
+        elif (len(first_line) > 50 and (("No." in list(first_col))  or ("#" in list(first_col)))):
+            print('Kondisi first col ada kolom tambahan')
+            flight_log = pd.read_csv(full_path, encoding="utf-8")
+            flight_log = flight_log.drop(flight_log.columns[[0]], axis=1)
+        elif (len(first_line)> 50):
+            print("Kondisi first line adalah kolom, namun first col berisi karakter random")
+            dataframe = []
+            with open(full_path) as file:
+                for i, line in enumerate(file):
+                    if i == 0: # First row should be column name
+                        line = line.rstrip().split(",")
+                        print("first line:", line)
+                        print("Length: ", len(line))
+                        start_index = line.index('CUSTOM.date [local]')
+                        col_num = len(line) - start_index
+                        dataframe.append(line[start_index:])
+                        # if(len(line) > col_num):
+                        #     sisa = len(line) - 169
+                        # elif "#" in list(line[0]):
+                        #     print("ada nih")
+                        #     dataframe.append(line[1:])
+                        # elif (len(line) > 160):
+                        #     dataframe.append(line)
+#                         print(sep)
+                    elif i > 0:
+#                         print("second line: ", line, '\n')
+                        line = line.rstrip().split(",")
+                        data_num = len(line)
+                        if (data_num == col_num):
+                            dataframe.append(line)
+                        elif (data_num > col_num):
+                            dataframe.append(line[data_num-col_num:])
+                        else:
+                            print("Jumlah data lebih kecil dari jumlah kolom")
+                        # if (i == 1):
+                        #     print("i = 1, len :", len(line))
+                        #     col_num = len(line)
+                        # if(len(line) > col_num):
+                        #     sisa = len(line) - col_num
+                        #     dataframe.append(line[sisa:])
+                        # elif (len(line[0].split('/')) != 3):
+                        #     print(len(line[0]))
+                        #     print(line[0].split('/'))
+                        #     dataframe.append(line[1:])
+                        # else:
+                        #     dataframe.append(line)
+                flight_log = pd.DataFrame(data=dataframe[1:], columns=dataframe[0])
+                file.close()
         else:
-            print("masuk ndak waras")
+            print("Kondisi first line adalah karakter random")
             dataframe = []
             # read ulang file untuk ambil content
             with open(full_path) as file:
                 for i, line in enumerate(file):
-                    if i == 0: # First row should be column name
-                        sep = line.rstrip()[-1]
+                    if i == 0: 
+                        # sep = line.rstrip()[-1]
+                        sep = ","
 #                         print(sep)
-#                         print("first line:", line)
+                        print("first line:", line)
+                        print("Length: ", len(line))
                     elif i > 0:
-#                         print("second line: ", line, '\n')
                         line = line.rstrip().split(sep)
-#                         print(len(line))
-                        dataframe.append(line)
+                        # Second row should be column name
+                        if (i == 1):
+                            start_index = line.index('CUSTOM.date [local]')
+                            col_num = len(line) - start_index
+                            dataframe.append(line[start_index:])
+                        else:
+                            # 3rd... row should be the log records
+                            data_num = len(line)
+                            if (data_num == col_num):
+                                dataframe.append(line)
+                            elif (data_num > col_num):
+                                dataframe.append(line[data_num-col_num:])
+                            else:
+                                print("Jumlah data lebih kecil dari jumlah kolom")
+                # if(dataframe[0][0] == "CUSTOM.date [local]"):
+                #     flight_log = pd.DataFrame(data=dataframe[1:], columns=dataframe[0])
+                # else:
                 flight_log = pd.DataFrame(data=dataframe[1:], columns=dataframe[0])
                 file.close()
 #         flight_log = ""
@@ -110,8 +177,13 @@ def read_file(path, file_name, folder_data):
         with open(full_path, 'r', encoding='utf-8') as file:
             # Extract the file contents here
             # contents = file.read().strip()
-            
-            date = file_name
+            date = file_name.split("-")
+            if (len(date) == 3 or len(date) == 4):
+                date = date[0] + "/" + date[1] + "/" + date[2]
+            elif ():
+                date = date[0] + "/" + date[1] + "/" + date[2]
+            else:
+                date = file_name
             record_list = []
             lines = file.readlines()
             message = ""
@@ -138,7 +210,7 @@ def read_file(path, file_name, folder_data):
 
 def main():
     # Paste the full path here
-    path = r"E:\6025211018 - Swardiantara S\drone-timeline\DJI_Inspire_1\df010\2018_June\mobile_android"
+    path = r"E:\6025211018 - Swardiantara S\drone-timeline\DJI_Mavic_2\df067\2018_September\mobile_android_logical"
     os.chdir(path)
     path_split = path.split("\\")
     controller = path_split[-1]
@@ -152,9 +224,10 @@ def main():
     # listFiles = os.listdir()
     for filename in os.listdir():
         # file_path = f"{path}\{file}"
-        print("Extracting file: %s" % filename)
-        read_file(path, filename, folder_data)
-        print("Finish Extracting file: %s\n" % filename)
+        if(filename.find("extracted_")==-1):
+            print("Extracting file: %s" % filename)
+            read_file(path, filename, folder_data)
+            print("Finish Extracting file: %s\n" % filename)
 
 if __name__ == "__main__":
     main()
