@@ -1,0 +1,194 @@
+"Cannot switch flight mode. Turn on ""Multiple Flight Modes"" to enable Atti and Sport Modes."
+"Landing Gear Raising.; Home Point Recorded
+Aircraft is close to Home Point. Return-to-Home Mode is now Auto Landing Mode.
+Aircraft is close to the Home Point. Initiating Return to Home will now trigger Auto Landing.
+Aircraft is entering a restricted area
+Aircraft is in Attitude mode, so that it will not hover. Please fly with caution.
+Aircraft is in QuickShot Mode. Ensure your enviornment is free of potential obstacles.
+Aircraft is now following you.
+Aircraft is returning to the Home Point. Minimum RTH Altitude is 30m. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH if necessary.
+Aircraft is returning to the Home Point. Minimum RTH Altitude is 30m. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH.
+Aircraft is returning to the Home Point. Minimum RTH Altitude is 98ft. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH.
+Aircraft is returning to the Home Point. Minimum RTH Altitude is30m. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH.
+Aircraft is returning to the Home Point. RTH Altitude is 30m. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH if necessary.
+Aircraft out of Range
+Ambient Light is too weak.
+Ambient Light too Weak
+Attitude is too large.
+Away and Follow in progress.
+Backward Obstacle Sensing is not functioning.
+Battery Signal Error. Check battery connection.
+Battery temperature is below 15 degrees Celsius. Warm up the battery temperature to above 25 degree Celsius to ensure a safe flight.
+Braking now! Return sticks to midpoints first.
+Braking now. Return sticks to midpoints, then continue flying.
+Camera Settings Adjusted to ActiveTrack
+Cannot change current flight mode. Enable Multiple Flight Modes in Settings menu to change.
+Cannot enter the selected flight mode. Try again later.
+Cannot Identify Subject
+Cannot switch flight mode. Turn on "Multiple Flight Modes" to enable Atti and Sport Modes
+Cannot Takeoff in Travel Mode. Exit Travel Mode.
+Command Failed
+Command Timeout
+Compass Error. Exit P-GPS Mode
+Compass Interference. Temp Max Altitude: 98ft
+Compass Redundancy Switch
+Compass Stuck. Restart Aircraft. Contact DJI Support if this persists.
+Correcting Landing Position
+Critically Low Power. Aircraft Landing
+Current RTH route will pass a No-Fly zone. Pay attention to the aircraft's position to avoid RTH failure.
+Data Recorder File Index is 12.
+Data Recorder File Index is 13.
+Data Recorder File Index is 15.
+Data Recorder File Index is 17.
+Data Recorder File Index is 18.
+Data Recorder File Index is 19.
+Data Recorder File Index is 2.
+Data Recorder File Index is 21.
+Data Recorder File Index is 29.
+Data Recorder File Index is 3.
+Data Recorder File Index is 30.
+Data Recorder File Index is 4.
+Data Recorder File Index is 45.
+Data Recorder File Index is 46.
+Data Recorder File Index is 5.
+Data Recorder File Index is 57.
+Data Recorder File Index is 65.
+Data Recorder File Index is 7.
+Data Recorder File Index is 8.
+Descending. Exited Visual Avoidance System
+Downlink Lost.
+Downlink Restored (after 0m 0.9s).
+Downlink Restored (after 0m 1.1s).
+Downlink Restored (after 0m 1.2s).
+Downlink Restored (after 0m 1.4s).
+Downlink Restored (after 0m 1.5s).
+Downlink Restored (after 0m 1.6s).
+Downlink Restored (after 0m 1.7s).
+Downlink Restored (after 0m 11.3s).
+Downlink Restored (after 0m 11s).
+Downlink Restored (after 0m 1s).
+Downlink Restored (after 0m 2.2s).
+Downlink Restored (after 0m 2.3s).
+Downlink Restored (after 0m 2.9s).
+Downlink Restored (after 0m 5.6s).
+Downlink Restored (after 0m 5.8s).
+Drag a box around or tap a target on screen. Then tap Go.
+Exited Visual Avoidance System.
+Flight Mode Set to Attitude
+Fly with caution and ensure the aircraft remains within your line of sight.
+Forward Obstacle Sensing is not functioning.
+Forward Obstacle Sensing not Responding
+Gimbal Pitch Limit Reached.
+Gimbal Pitch Reached Movement Limit
+Gimbal Roll Limit Reached.
+Gimbal Yaw Limit Reached
+GPS Position Mismatch.
+Ground Plain. Safe to Land.
+High wind velocity. Ensure the aircraft remains within your line of sight and fly with caution.
+High wind velocity. Ensure the aircraft remains within your line of sight and fly with caution.; Downlink Lost.
+High wind velocity. Ensure the aircraft remains within your line of sight and fly with caution.; High wind velocity. Fly with caution and land in a safe place ASAP.
+High wind velocity. Fly with caution and land in a safe place ASAP.
+High wind velocity. Fly with caution.
+Home Point Recorded, Return-to-Home Altitude:98FT
+Home Point Recorded, Return-to-Home Altitude:98FT.
+Home Point Recorded.
+Home Point recorded. Return-to-Home Altitude:98FT
+Home Point recorded. Return-to-Home Altitude:98FT.
+Home Point Recorded.; Taking off.
+Home Point Updated.
+Image Transmission Recovered. Aircraft is returning home.
+Intelligent Flight Modes have not been enabled. Enable this option in Main Controller Settings if needed.
+Landing Gear Lowered.
+Landing gear lowered. Obstacle Avoidance Disabled.
+Landing gear lowered. Obstacle Avoidance has been disabled.
+Landing gear lowered.Obstacle Avoidance Disabled.
+Landing Gear Lowering.
+Landing Gear Raised.
+Landing Gear Raising.
+Landing Protection Activated. Aircraft will decelerate during landing.
+Landing.
+Large Wind Velocity.
+Large Wind Velocity. Fly with caution.
+Lens not connected
+Locating Landing Point
+Low Power. Aircraft is returning to the Home Point.
+Low Power. Returning home.
+Magnetic Filed Interference. Exit P-GPS Mode
+Magnetic Filed Interference. Exit P-GPS Mode.; Yaw Error.
+Max Flight Altitude Reached. Adjust in Main Controller Settings if necessary
+Max Flight Distance Reached. Adjust in Main Controller Settings if necessary.
+Maximum Flight Altitude Reached.
+Maximum Flight Altitude Reached. Adjust altitude in MC Settings if required.
+Maximum Flight Distance Reached. Adjust distance in MC Settings if required.
+Maximum flight distance reached. Adjust the distance in MC Settings if required.
+Mobile device CPU fully loaded. Related performance will be affected.
+Mobile device version too old to support HD image transmission and the image transmission mode has been switch to normal mode.
+Motor or propeller error. Check the motors and propellers.
+Motors Started.
+Not Allowed to change Aircraft Mode. If needed
+Obstacle Avoidance Disabled.
+Obstacle Avoidance Disabled. Landing gear lowered. Obstacle Avoidance Disabled.
+Obstacle Avoidance disabled. Landing gear lowered. Obstacle Avoidance has been disabled.
+Obstacle Avoidance will be disabled in landing.
+Obstacle Avoided. Revise Flight Route
+Obstacle Sensing will be disabled when aircraft is landing. Fly with caution.
+PalmControl in Process
+Precision Landing
+Propulsion output has been limited to ensure battery health.
+Rectifying aircraft position
+Remote controller assisted takeoff initiated.
+Remote Controller Right Dial Locked. Lightly press it to adjust.
+Returning to the Home Point
+Return-to-Home Altitude:65FT
+Return-to-Home Altitude:98FT
+Return-to-Home Altitude:98FT."
+Right Dial Locked. Lightly press to adjust.
+RTH Altitude: 65FT.
+RTH Altitude: 98FT.
+RTH Altitude: 98FT.; Data Recorder File Index is 1.
+RTH: Ascending to RTH altitude.
+RTH: Cruise.
+RTH: Heading alignment.
+RTH: Preascending.
+Satellite positioning off. Fly with Caution.
+SD card write speed is too slow. Not suitable for shooting a 4K video.
+Sensing system is blocked or too close to the obstacle.
+Set Flight Mode to GPS to fly safe
+Strong Interference Detected. Be careful when flying long distances.
+Strong Interference Now. Fly with caution.
+Strong Interference to Aircraft. Signal interruption may be more likely. Fly with caution.
+Strong Interference. Fly with caution.
+Strong Remote Controller Interference.
+Strong wireless interference. Please fly with caution.
+Strong wireless interference. Please fly with caution.; Obstacle Avoidance Disabled. Landing gear lowered. Obstacle Avoidance Disabled.
+Subject lost. Searching ...
+Subject too Large. Move Away and retry
+Subject too Small. Get Closer and retry
+Switched to P (Positioning)-mode.
+Switched to S (Sport)-mode.
+Switched to T (Tripod)-mode.
+Take off and retry this function.
+Take off in P-Mode
+Taking Off.
+Tap the screen lightly to focus.
+Tap the screen to focus.
+Tap to choose a valid zone.
+The remaining battery is only enough for RTH. Return home now.
+To take off in non-P mode, toggle Flight Mode Switch to another mode and then toggle it back.
+Warning
+WarningThe remaining battery is only enough for RTH. Return home now.
+Weak GPS signal. Aircraft is in Attitude mode and hovering may be unstable. Fly with caution.
+Weak signal. Adjust antenna and avoid signal block.
+Weak signal. Avoid blocking the antennas and keep the antennas parallel to and facing toward the aircraft during flight.
+Weak signal. Avoid blocking the antennas and keep the antennas parallel to and facing toward the aircraft during flight.; Downlink Lost.
+Yaw Error.
+Your aircraft has entered a Warning Zone (Class D). Please fly with caution.
+Your palm is too close to the aircraft. Please step farther away.
+Your palm is too far away from the aircraft. Please step closer.
+Home Point Recorded. RTH Altitude: 30m.
+Aircraft close to Home Point. go home shifts to landing.
+Precision Landing. Rectifying aircraft position.
+Attitude is too large. Backward Obstacle Sensing is not functioning.
+Precision Landing. Correcting Landing Position.
+In Flight.
+Landing Canceled.
