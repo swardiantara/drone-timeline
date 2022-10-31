@@ -44,7 +44,7 @@ def read_file(path, file_name, folder_data):
                 record_list.append([drone_model, dataset, controller, file_name, date, time, message])
                 # print(record)
             dataframe = pd.DataFrame(record_list, index=None, columns=["drone_model", "dataset", "controller", "source_file", "date", "time", "message"])
-            file_name = "extracted_" + file_name
+            file_name = "parsed_" + file_name
             dataframe.to_csv(f"{path}/{file_name}.csv", index=False, encoding='utf-8')
             # print(text_split)
         # elif first_char == "[" and not second_char == "[":  # [2017-06-28 05:56:19.955]remove need upgrade groups
@@ -71,12 +71,12 @@ def read_file(path, file_name, folder_data):
 
 
 def main():
-    path = r"E:\6025211018 - Swardiantara S\drone-timeline\DJI_Spark\df008\2018_June\mobile_iOS"
+    path = r"E:\6025211018 - Swardiantara S\Drone Datasets\DJI_Inspire_2\df026\2017_August\mobile_iOS_backup\df026\Export"
     os.chdir(path)
     path_split = path.split("\\")
-    controller = path_split[-1]
-    df = path_split[-3]
-    drone_make = path_split[-4]
+    controller = path_split[-3]
+    df = path_split[-5]
+    drone_make = path_split[-6]
     folder_data = {
         "controller": controller,
         "dataset": df,
@@ -86,9 +86,9 @@ def main():
     listFiles = os.listdir()
     for filename in os.listdir():
         # file_path = f"{path}\{file}"
-        print("Extracting file: ", filename)
+        print("Parsing file: ", filename)
         read_file(path, filename, folder_data)
-        print("Finish Extracting file: ", filename)
+        print("Finish Parsing file: ", filename)
 
 if __name__ == "__main__":
     main()
